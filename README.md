@@ -36,4 +36,5 @@ apk打包了armeabi-v7a和x86_64两个版本的依赖文件，所以比普通的
 现缺失解密部分内容，以及解析器等功能
 
 #### 问题反馈
-有什么问题可以反馈到telegram(https://t.me/+A3SLQRmPVi9kOThl)，不过由于工作原因，可能不会很及时的处理问题，请耐心等待。
+有什么问题可以反馈到telegram(https://t.me/+A3SLQRmPVi9kOThl)
+不过由于工作原因，可能不会很及时的处理问题，请耐心等待。
