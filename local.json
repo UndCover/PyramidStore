@@ -1,5 +1,14 @@
 {
 	"sites": [{
+		"key": "py_bilibili",
+		"name": "哔哩",
+		"type": 3,
+		"api": "py_bilibili",
+		"searchable": 0,
+		"quickSearch": 0,
+		"filterable": 1,
+		"ext": "file:///storage/emulated/0/plugin/py_bilibili.py"
+	}, {
 		"key": "py_voflix",
 		"name": "Voflix",
 		"type": 3,
@@ -8,7 +17,7 @@
 		"quickSearch": 1,
 		"filterable": 1,
 		"ext": "file:///storage/emulated/0/plugin/py_voflix.py"
-	},{
+	}, {
 		"key": "py_gimytv",
 		"name": "剧迷",
 		"type": 3,
@@ -17,7 +26,7 @@
 		"quickSearch": 1,
 		"filterable": 1,
 		"ext": "file:///storage/emulated/0/plugin/py_gimytv.py"
-	},{
+	}, {
 		"key": "py_genmov",
 		"name": "跟剧",
 		"type": 3,
