@@ -31,6 +31,13 @@ class Spider(Spider):  # 元类 默认的元类 type
 	def manualVideoCheck(self):
 		pass
 	def playerContent(self,flag,id,vipFlags):
+		if flag == 'AliYun':
+			return self.originContent(flag,id,vipFlags)
+		elif flag == 'AliYun原画':
+			return self.fhdContent(flag,id,vipFlags)
+		else:
+			return 	{}		
+	def fhdContent(self,flag,id,vipFlags):
 		self.login()
 		ids = id.split('+')
 		shareId = ids[0]
@@ -57,7 +64,7 @@ class Spider(Spider):  # 元类 默认的元类 type
 			'header':newHeader
 		}
 		return result
-	def playerContent2(self,flag,id,vipFlags):
+	def originContent(self,flag,id,vipFlags):
 		self.login()
 		ids = id.split('+')
 		shareId = ids[0]
@@ -118,7 +125,7 @@ class Spider(Spider):  # 元类 默认的元类 type
 			'vod_name':infoJo['share_name'],
 			'vod_pic':infoJo['avatar'],
 			'vod_content':tid,
-			'vod_play_from':'阿里云盘'
+			'vod_play_from':'AliYun$$$AliYun原画'
 		}
 		fileType = fileInfo['type']
 		if fileType != 'folder':
@@ -136,6 +143,7 @@ class Spider(Spider):  # 元类 默认的元类 type
 
 		for sm in sortedMap:
 			arrayList.append(sm[0]+'$'+sm[1])
+		playList.append('#'.join(arrayList))
 		playList.append('#'.join(arrayList))
 		vodList['vod_play_url'] = '$$$'.join(playList)
 
@@ -383,7 +391,7 @@ class Spider(Spider):  # 元类 默认的元类 type
 		url = 'https://api.aliyundrive.com/token/refresh'
 		if len(self.authorization) == 0 or self.timeoutTick - self.localTime <= 600:
 			form = {
-				'refresh_token':'3781469b13074e4cac1e0e7113e4fa20'				
+				'refresh_token':'28801b1dbaf4418fb7bc221a575703dd'
 			}
 			rsp = requests.post(url,json = form,headers=self.header)
 			jo = json.loads(rsp.text)
