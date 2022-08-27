@@ -18,6 +18,8 @@
 ###### 2. 将plugin放到设备根目录
 ###### 3. 使用离线配置文件(https://raw.githubusercontent.com/UndCover/PyramidStore/main/local.json)
 
+### 其他版本可参考添加教程
+https://raw.githubusercontent.com/UndCover/PyramidStore/main/tutorial.md
 
 ### FAQ
 ###### 0. APP版本
