@@ -18,6 +18,9 @@
 ###### 2. 将plugin放到设备根目录
 ###### 3. 使用离线配置文件(https://raw.githubusercontent.com/UndCover/PyramidStore/main/local.json)
 
+### 爬虫写法参考
+https://github.com/UndCover/PyramidStore/blob/main/spider.md
+
 ### 其他版本可参考添加教程
 https://github.com/UndCover/PyramidStore/blob/main/tutorial.md
 
