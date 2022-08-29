@@ -23,6 +23,13 @@ dependencies {
 ```
 ##### 4.修改项目 App.java
 ```java
+// 添加引用
+import com.undcover.freedom.pyramid.PythonLoader;
+public class App extends MultiDexApplication {
+    //...
+}
+```
+```java
 public void onCreate() {
 	// ....
 	PlayerHelper.init();
@@ -32,6 +39,14 @@ public void onCreate() {
 }
 ```
 ##### 5.修改 ApiConfig.java
+```java
+// 添加引用
+import com.undcover.freedom.pyramid.PythonLoader;
+public class ApiConfig {
+    //...
+}
+```
+
 ```java
 private void parseJson(String apiUrl, String jsonStr) {
     //pyramid-add-start
