@@ -41,7 +41,7 @@ apk打包了armeabi-v7a和x86_64两个版本的依赖文件，所以比普通的
 未来代码将会出现在这里(https://github.com/UndCover/Pyramid)
 
 ###### 5.目前还有哪些问题
-现缺失解密部分内容，以及解析器等功能
+现缺失解析器等功能
 
 #### 问题反馈
 有什么问题可以反馈到telegram(https://t.me/+A3SLQRmPVi9kOThl)

@@ -9,6 +9,15 @@
 		"filterable": 1,
 		"ext": "file:///storage/emulated/0/plugin/py_bilibili.py"
 	}, {
+		"key": "py_czspp",
+		"name": "厂长",
+		"type": 3,
+		"api": "py_czspp",
+		"searchable": 1,
+		"quickSearch": 1,
+		"filterable": 1,
+		"ext": "file:///storage/emulated/0/plugin/py_czspp.py"
+	}, {
 		"key": "py_zxzj",
 		"name": "在线之家",
 		"type": 3,

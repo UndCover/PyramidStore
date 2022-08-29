@@ -25,6 +25,8 @@ dependencies {
 ```java
 // 添加引用
 import com.undcover.freedom.pyramid.PythonLoader;
+import com.github.catvod.crawler.SpiderNull;
+
 public class App extends MultiDexApplication {
     //...
 }
