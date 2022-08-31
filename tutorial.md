@@ -25,7 +25,6 @@ dependencies {
 ```java
 // 添加引用
 import com.undcover.freedom.pyramid.PythonLoader;
-import com.github.catvod.crawler.SpiderNull;
 
 public class App extends MultiDexApplication {
     //...
@@ -43,6 +42,7 @@ public void onCreate() {
 ##### 5.修改 ApiConfig.java
 ```java
 // 添加引用
+import com.github.catvod.crawler.SpiderNull;
 import com.undcover.freedom.pyramid.PythonLoader;
 public class ApiConfig {
     //...
