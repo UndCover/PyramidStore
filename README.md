@@ -9,6 +9,11 @@
 
 #### 一定要开启存储权限！一定要开启存储权限！一定要开启存储权限！
 
+#### 大会员版B站爬虫需要在文件对应位置填入cookies，否则无法使用。
+
+Cookies获取方法：Chrome浏览器访问www.bilibili.com并登陆→F12→F5→Network→Header→cookies:后面的内容。
+
+
 #### 在线配置
 ###### 1. 安装apk (测试阶段只提供armeabi-v7a和x86_64)
 ###### 2. 使用在线配置文件(https://raw.githubusercontent.com/UndCover/PyramidStore/main/py.json)
