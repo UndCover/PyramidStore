@@ -54,6 +54,15 @@
 		"filterable": 1,
 		"ext": "file:///storage/emulated/0/plugin/py_genmov.py"
 	}, {
+		"key": "py_douyu",
+		"name": "🔥斗鱼",
+		"type": 3,
+		"api": "py_douyu",
+		"searchable": 0,
+		"quickSearch": 0,
+		"filterable": 1,
+		"ext": "file:///storage/emulated/0/plugin/py_douyu.py"
+      },{
 		"key": "py_cokemv",
 		"name": "COKE",
 		"type": 3,
