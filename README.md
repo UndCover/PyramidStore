@@ -12,6 +12,8 @@
 #### 大会员版B站爬虫需要在文件对应位置填入cookies，否则无法使用。
 
 Cookies获取方法：Chrome浏览器访问www.bilibili.com并登陆→F12→F5→Network→Header→cookies:后面的内容。
+![image](https://raw.githubusercontent.com/lm317379829/PyramidStore/main/img/cookies%E8%8E%B7%E5%8F%96.jpg)
+![image](https://raw.githubusercontent.com/lm317379829/PyramidStore/main/img/py_bilivd%E5%A1%AB%E5%85%A5.jpg)
 
 
 #### 在线配置
