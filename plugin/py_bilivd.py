@@ -11,7 +11,7 @@ import base64
 
 class Spider(Spider):  # 元类 默认的元类 type
 	def getName(self):
-		return "哔哩"
+		return "B站视频"
 	def init(self,extend=""):
 		print("============{0}============".format(extend))
 		pass
@@ -58,7 +58,7 @@ class Spider(Spider):  # 元类 默认的元类 type
 		return rsp.cookies
 	def categoryContent(self,tid,pg,filter,extend):		
 		result = {}
-		url = 'https://api.bilibili.com/x/web-interface/search/type?search_type=video&keyword={0}&duration=2&duration=3&duration=4&page={1}'.format(tid,pg)
+		url = 'https://api.bilibili.com/x/web-interface/search/type?search_type=video&keyword={0}&page={1}'.format(tid,pg)
 		if len(self.cookies) <= 0:
 			self.getCookie()
 		rsp = self.fetch(url,cookies=self.cookies)
@@ -134,7 +134,7 @@ class Spider(Spider):  # 元类 默认的元类 type
 		}
 		return result
 	def searchContent(self,key,quick):
-		url = 'https://api.bilibili.com/x/web-interface/search/type?search_type=video&keyword={0}&duration=2&duration=3&duration=4'.format(key)
+		url = 'https://api.bilibili.com/x/web-interface/search/type?search_type=video&keyword={0}'.format(key)
 		if len(self.cookies) <= 0:
 			self.getCookie()
 		rsp = self.fetch(url,cookies=self.cookies)
