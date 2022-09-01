@@ -35,7 +35,16 @@
 		"quickSearch": 1,
 		"filterable": 1,
 		"ext": "file:///storage/emulated/0/plugin/py_voflix.py"
-	}, {
+	},{
+		"key": "py_bilimd",
+		"name": "🔥B站影视",
+		"type": 3,
+		"api": "py_bilimd",
+		"searchable": 1,
+		"quickSearch": 1,
+		"filterable": 1,
+		"ext": "file:///storage/emulated/0/plugin/py_bilimd.py"
+	},{
 		"key": "py_gimytv",
 		"name": "剧迷",
 		"type": 3,
