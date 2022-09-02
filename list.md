@@ -13,6 +13,7 @@
 |py_gimytv|剧迷|UndCover|||
 |py_voflix|voflix|UndCover|||
 |py_xmaomi|小猫咪|UndCover|||
+|py_cctv|央视栏目|UndCover|||
 
 **以上爬虫均经过测试，在保证功能完整的情况下放出，若失效，请及时反馈**
 
