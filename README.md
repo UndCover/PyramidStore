@@ -8,7 +8,7 @@
 
 ---
 
-## 爬虫支持列表查看
+## [爬虫支持列表查看](https://github.com/UndCover/PyramidStore/blob/main/list.md)
 
 |文件名|名称|作者|描述|注意|
 |---|:---:|:---:|---|---|

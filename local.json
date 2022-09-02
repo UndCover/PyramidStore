@@ -44,7 +44,16 @@
 		"quickSearch": 1,
 		"filterable": 1,
 		"ext": "file:///storage/emulated/0/plugin/py_voflix.py"
-	}, {
+	},{
+		"key": "py_bilimd",
+		"name": "🔥B站影视",
+		"type": 3,
+		"api": "py_bilimd",
+		"searchable": 1,
+		"quickSearch": 1,
+		"filterable": 1,
+		"ext": "file:///storage/emulated/0/plugin/py_bilimd.py"
+	},{
 		"key": "py_gimytv",
 		"name": "剧迷",
 		"type": 3,
@@ -63,6 +72,24 @@
 		"filterable": 1,
 		"ext": "file:///storage/emulated/0/plugin/py_genmov.py"
 	}, {
+		"key": "py_huya",
+		"name": "🔥虎牙",
+		"type": 3,
+		"api": "py_huya",
+		"searchable": 0,
+		"quickSearch": 0,
+		"filterable": 1,
+		"ext": "file:///storage/emulated/0/plugin/py_huya.py"
+	},{
+		"key": "py_douyu",
+		"name": "🔥斗鱼",
+		"type": 3,
+		"api": "py_douyu",
+		"searchable": 0,
+		"quickSearch": 0,
+		"filterable": 1,
+		"ext": "file:///storage/emulated/0/plugin/py_douyu.py"
+      },{
 		"key": "py_cokemv",
 		"name": "COKE",
 		"type": 3,
