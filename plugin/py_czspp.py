@@ -166,7 +166,7 @@ class Spider(Spider):  # 元类 默认的元类 type
 			pic = vod.xpath('./img/@data-original')[0]
 			href = vod.xpath('./@href')[0]
 			tid = self.regStr(href,'movie/(\\S+).html')
-			remark = vod.xpath('./div[@class="jidi"]/span/text()')[0]
+			remark = ""
 			videos.append({
 				"vod_id": tid,
 				"vod_name": name,
