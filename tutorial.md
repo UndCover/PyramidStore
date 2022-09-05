@@ -85,6 +85,9 @@ public Object[] proxyLocal(Map param) {
                 return PythonLoader.getInstance().proxyLocal("","",param);
             SourceBean sourceBean = ApiConfig.get().getSource(doStr);
             return PythonLoader.getInstance().proxyLocal(sourceBean.getKey(),sourceBean.getExt(),param);
+        }else{
+            String doStr = param.get("do").toString();
+            if(doStr.equals("live")) return PythonLoader.getInstance().proxyLocal("","",param);
         }
     } catch (Exception e) {
         e.printStackTrace();
