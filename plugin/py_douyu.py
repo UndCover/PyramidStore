@@ -47,7 +47,7 @@ class Spider(Spider):
 			aid = (vod['roomId']).strip()
 			title = vod['roomName'].strip()
 			img = vod['roomPic'].strip()
-			remark = (vod['categoryName']).strip()
+			remark = (vod['ownerName']).strip()
 			videos.append({
 				"vod_id": aid,
 				"vod_name": title,
