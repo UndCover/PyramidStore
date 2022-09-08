@@ -33,7 +33,7 @@
 
 <div id="py_cctv" ></div>
 
-* py_cctv添加分类可以访问[央视栏目](https://tv.cctv.com/lm/index.shtml)找到对应的栏目，点击栏目最新一期的链接，然后再新打开的页面里右键查看源代码，在源代码页面搜索 **专题id**，即可找到对应栏目的ID，最后，将栏目ID和栏目名称添加到py_cctv分类字典中即可
+* py_cctv添加分类可以访问[央视栏目](https://tv.cctv.com/lm/index.shtml)找到对应的栏目，点击栏目最新一期的链接，然后再新打开的页面里右键查看源代码。在源代码页面搜索 **videotvCodes**，找到videotvCodes的值作为栏目ID，如果videotvCodes对应的值为空，则在源代码页面搜索 **专题id**，找到TOPC开头的值即为栏目ID，最后，将栏目ID和栏目名称添加到py_cctv分类字典中即可
 ![image](https://raw.githubusercontent.com/UndCover/PyramidStore/main/img/cctvtopic.jpg)
 
 

@@ -23,9 +23,8 @@ class Spider(Spider):  # 元类 默认的元类 type
 			"等着我": "TOPC1451378757637200",
 			"我爱发明": "TOPC1569314345479107",
 			"动物世界": "TOPC1451378967257534",
-			"探索发现": "TOPC1451557893544236",
-			"创新进行时": "TOPC1570875218228998",
-			"我爱发明2021": "TOPC1451557970755294"
+			"我爱发明2021": "TOPC1451557970755294",
+			"经典咏流传 第五季":"VIDAIiNbDQzOjE5mLl3T4t2B220403"
 		}
 		classes = []
 		for k in cateManual:
@@ -54,7 +53,8 @@ class Spider(Spider):  # 元类 默认的元类 type
 				params[idx] = '{0}={1}'.format(filterParams[idx],extend[fp])
 		suffix = '&'.join(params)
 		url = 'https://api.cntv.cn/NewVideo/getVideoListByColumn?{0}&n=20&sort=desc&mode=0&serviceId=tvcctv&t=json'.format(suffix)
-		print(url)
+		if not tid.startswith('TOPC'):
+			url = 'https://api.cntv.cn/NewVideo/getVideoListByAlbumIdNew?{0}&n=20&sort=desc&mode=0&serviceId=tvcctv&t=json'.format(suffix)
 		rsp = self.fetch(url,headers=self.header)
 		jo = json.loads(rsp.text)
 		vodList = jo['data']['list']
