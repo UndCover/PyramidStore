@@ -46,13 +46,20 @@ class Spider(Spider):  # 元类 默认的元类 type
 		return result
 	cookies = ''
 	def getCookie(self):
-		cookies_str = ""  # 填入大会员Cookies
+		cookies_str = "" # 填B站Cookies
 		cookies_dic = dict([co.strip().split('=') for co in cookies_str.split(';')])
 		rsp = session()
 		cookies_jar = utils.cookiejar_from_dict(cookies_dic)
 		rsp.cookies = cookies_jar
-		self.cookies = rsp.cookies
+		content = self.fetch("http://api.bilibili.com/x/web-interface/nav", cookies=rsp.cookies)
+		res = json.loads(content.text)
+		if res["code"] == 0:
+			self.cookies = rsp.cookies
+		else:
+			rsp = self.fetch("https://www.bilibili.com/")
+			self.cookies = rsp.cookies
 		return rsp.cookies
+
 	def categoryContent(self,tid,pg,filter,extend):		
 		result = {}
 		url = 'https://api.bilibili.com/pgc/season/index/result?order=2&season_status=-1&style_id=-1&sort=0&area=-1&pagesize=20&type=1&st={0}&season_type={0}&page={1}'.format(tid,pg)
@@ -60,10 +67,6 @@ class Spider(Spider):  # 元类 默认的元类 type
 			self.getCookie()
 		rsp = self.fetch(url, cookies=self.cookies)
 		content = rsp.text
-		jo = json.loads(content)
-		if jo['code'] != 0:
-			rspRetry = self.fetch(url, cookies=self.getCookie())
-			content = rspRetry.text
 		jo = json.loads(content)
 		videos = []
 		vodList = jo['data']['list']
@@ -116,7 +119,7 @@ class Spider(Spider):  # 元类 默认的元类 type
 		for tmpJo in ja:
 			eid = tmpJo['id']
 			cid = tmpJo['cid']
-			part = tmpJo['title']
+			part = tmpJo['title'].replace("#", "-")
 			playUrl = playUrl + '{0}${1}_{2}#'.format(part, eid, cid)
 
 		vod['vod_play_from'] = 'B站影视'
@@ -162,14 +165,20 @@ class Spider(Spider):  # 元类 默认的元类 type
 	def playerContent(self,flag,id,vipFlags):
 		result = {}
 		ids = id.split("_")
-		url = 'https://api.bilibili.com/pgc/player/web/playurl?qn=116&fnval=0&ep_id={0}&cid={1}'.format(ids[0],ids[1])
+		header = {
+			"Referer": "https://www.bilibili.com",
+			"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"
+		}
+		url = 'https://api.bilibili.com/pgc/player/web/playurl?qn=116&ep_id={0}&cid={1}'.format(ids[0],ids[1])
 		if len(self.cookies) <= 0:
 			self.getCookie()
-		rsp = self.fetch(url,cookies=self.cookies)
+		rsp = self.fetch(url,cookies=self.cookies,headers=header)
 		jRoot = json.loads(rsp.text)
+		if jRoot['message'] != 'success':
+			print("需要大会员权限才能观看")
+			return {}
 		jo = jRoot['result']
 		ja = jo['durl']
-		
 		maxSize = -1
 		position = -1
 		for i in range(len(ja)):
