@@ -71,3 +71,5 @@ class Spider(metaclass=ABCMeta):
             return ele[0]
     def loadModule(self,name,fileName):
         return SourceFileLoader(name, fileName).load_module()
+    def test(self):
+        print('please override the test function')

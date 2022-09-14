@@ -234,3 +234,12 @@ class Spider(Spider):  # 元类 默认的元类 type
 	def localProxy(self,param):
 		action = {}
 		return [200, "video/MP2T", action, ""]
+	def test(self):
+		# formatJo = self.init([]) # 初始化                                           
+		# formatJo = self.homeContent(True) # 主页
+		# formatJo = self.homeVideoContent() # 主页视频
+		# formatJo = self.searchContent("dota",False) # 搜索
+		# formatJo = self.categoryContent('dbtop250','1',False,{}) # 分类
+		# formatJo = self.detailContent(["849"]) #详情 11195
+		formatJo = self.playerContent("","bXZfODQ5LW5tXzE=",{}) # 播放
+		print(formatJo)
