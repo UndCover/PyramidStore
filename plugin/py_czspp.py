@@ -1,10 +1,8 @@
 # coding=utf-8
 # !/usr/bin/python
 import sys
-
 sys.path.append('..')
 from base.spider import Spider
-import json
 import base64
 from Crypto.Cipher import AES
 
@@ -110,15 +108,31 @@ class Spider(Spider):  # 元类 默认的元类 type
         for info in infoArray:
             content = info.xpath('string(.)')
             if content.startswith('类型'):
-                vod['type_name'] = content.replace("类型：", "")
+                tpyen = ''
+                for inf in info:
+                    tn = inf.text
+                    tpyen = tpyen +'/'+'{0}'.format(tn)
+                    vod['type_name'] = tpyen.strip('/')
             if content.startswith('地区'):
-                vod['vod_area'] = content.replace("地区：", "")
+                tpyeare = ''
+                for inf in info:
+                    tn = inf.text
+                    tpyeare = tpyeare +'/'+'{0}'.format(tn)
+                    vod['vod_area'] = tpyeare.strip('/')
             if content.startswith('豆瓣'):
                 vod['vod_remarks'] = content
             if content.startswith('主演'):
-                vod['vod_actor'] = content.replace("主演：", "")
+                tpyeact = ''
+                for inf in info:
+                    tn = inf.text
+                    tpyeact = tpyeact +'/'+'{0}'.format(tn)
+                    vod['vod_actor'] = tpyeact.strip('/')
             if content.startswith('导演'):
-                vod['vod_director'] = content.replace("导演：", "")
+                tpyedire = ''
+                for inf in info:
+                    tn = inf.text
+                    tpyedire  = tpyedire  +'/'+'{0}'.format(tn)
+                    vod['vod_director'] = tpyedire .strip('/')
         vod_play_from = '$$$'
         playFrom = ['厂长']
         vod_play_from = vod_play_from.join(playFrom)
