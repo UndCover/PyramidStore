@@ -144,6 +144,24 @@
 		"filterable": 1,
 		"ext": "file:///storage/emulated/0/plugin/py_xmaomi.py"
 	}, {
+		"key": "py_gitcafe",
+		"name": "小纸条",
+		"type": 3,
+		"api": "py_gitcafe",
+		"searchable": 1,
+		"quickSearch": 1,
+		"filterable": 0,
+		"ext": "file:///storage/emulated/0/plugin/py_gitcafe.py"
+	}, {
+		"key": "py_yiso",
+		"name": "易搜",
+		"type": 3,
+		"api": "py_yiso",
+		"searchable": 1,
+		"quickSearch": 1,
+		"filterable": 0,
+		"ext": "file:///storage/emulated/0/plugin/py_yiso.py"
+	}, {
 		"key": "py_zhaozy",
 		"name": "找资源",
 		"type": 3,

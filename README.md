@@ -10,16 +10,15 @@
 
 ## [爬虫支持列表查看](https://github.com/UndCover/PyramidStore/blob/main/list.md)
 
-|文件名|名称|作者|描述|注意|
-|---|:---:|:---:|---|---|
-|py_ali|阿里云盘|UndCover|用于阿里云盘爬取及阿里系爬虫调用|个人token请搜索refresh_token进行替换|
-|py_zhaozy|找资源|UndCover|调用py_ali||
-|py_pansou|盘搜|UndCover|调用py_ali||
-|py_bilibili|哔哩哔哩|UndCover|||
-|py_czspp|厂长|UndCover|||
-|py_zxzj|在线资源|UndCover|||
-
-[更多](https://github.com/UndCover/PyramidStore/blob/main/list.md)
+|文件名|名称|
+|---|:---:|
+|py_ali|阿里云盘|
+|py_zhaozy|找资源|
+|py_pansou|盘搜|
+|py_bilibili|
+|py_czspp||
+|py_zxzj||
+|[查看更多](https://github.com/UndCover/PyramidStore/blob/main/list.md)||
 
 ---
 

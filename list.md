@@ -18,6 +18,11 @@
 |py_bilivd|B站视频|[lm317379829](https://github.com/lm317379829)||[Cookies获取方法](#py_bilivd)|
 |py_huya|虎牙|[lm317379829](https://github.com/lm317379829)|||
 |py_douyu|斗鱼|[lm317379829](https://github.com/lm317379829)|||
+|py_gitcafe|小纸条|UndCover|调用py_ali||
+|py_yiso|易搜|UndCover|调用py_ali||
+|py_3qu|3QU|[lm317379829](https://github.com/lm317379829)|调用py_ali||
+|py_cyys|创艺|[lm317379829](https://github.com/lm317379829)|调用py_ali||
+|py_wmkk|完美看看|[lm317379829](https://github.com/lm317379829)| 七里香源目前无法播放||
 
 
 **以上爬虫均经过测试，在保证功能完整的情况下放出，若失效，请及时反馈**
@@ -25,8 +30,6 @@
 ## 待测试爬虫列表
 |文件名|名称|作者|描述|注意|
 |---|:---:|:---:|---|---|
-|py_gitcafe|小纸条|UndCover|调用py_ali|测试中，有问题请反馈|
-|py_yiso|易搜|UndCover|调用py_ali|测试中，有问题请反馈|
 
 ## 注意事项
 <div id="py_ali" ></div>
