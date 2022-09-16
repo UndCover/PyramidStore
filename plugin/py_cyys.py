@@ -107,11 +107,11 @@ class Spider(Spider):  # 元类 默认的元类 type
                     if inf.startswith('年份'):
                         vod['vod_year'] = inf.replace("年份：", "")
             if content.startswith('主演'):
-                vod['vod_actor'] = content.replace("\xa0", "/").replace("主演：", "")
+                vod['vod_actor'] = content.replace("\xa0", "/").replace("主演：", "").strip('/')
             if content.startswith('更新'):
                 vod['vod_remarks'] = content.replace("更新：", "")
             if content.startswith('导演'):
-                vod['vod_director'] = content.replace("\xa0", "").replace("导演：", "")
+                vod['vod_director'] = content.replace("\xa0", "").replace("导演：", "").strip('/')
 
         vod_play_from = '$$$'
         playFrom = []
