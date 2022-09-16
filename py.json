@@ -7,7 +7,7 @@
 		"searchable": 0,
 		"quickSearch": 0,
 		"filterable": 1,
-		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_bilibili.py"
+		"ext": "https://raw.iqiq.io/UndCover/PyramidStore/main/plugin/py_bilibili.py"
 	}, {
 		"key": "py_cctv",
 		"name": "央视",
@@ -16,7 +16,7 @@
 		"searchable": 0,
 		"quickSearch": 0,
 		"filterable": 1,
-		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_cctv.py"
+		"ext": "https://raw.iqiq.io/UndCover/PyramidStore/main/plugin/py_cctv.py"
 	}, {
 		"key": "py_czspp",
 		"name": "厂长",
@@ -25,7 +25,7 @@
 		"searchable": 1,
 		"quickSearch": 1,
 		"filterable": 1,
-		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_czspp.py"
+		"ext": "https://raw.iqiq.io/UndCover/PyramidStore/main/plugin/py_czspp.py"
 	}, {
 		"key": "py_zxzj",
 		"name": "在线之家",
@@ -34,7 +34,7 @@
 		"searchable": 1,
 		"quickSearch": 1,
 		"filterable": 1,
-		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_zxzj.py"
+		"ext": "https://raw.iqiq.io/UndCover/PyramidStore/main/plugin/py_zxzj.py"
 	}, {
 		"key": "py_voflix",
 		"name": "Voflix",
@@ -43,7 +43,7 @@
 		"searchable": 1,
 		"quickSearch": 1,
 		"filterable": 1,
-		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_voflix.py"
+		"ext": "https://raw.iqiq.io/UndCover/PyramidStore/main/plugin/py_voflix.py"
 	}, {
 		"key": "py_bilimd",
 		"name": "🔥B站影视",
@@ -52,7 +52,7 @@
 		"searchable": 1,
 		"quickSearch": 1,
 		"filterable": 1,
-		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_bilimd.py"
+		"ext": "https://raw.iqiq.io/UndCover/PyramidStore/main/plugin/py_bilimd.py"
 	}, {
 		"key": "py_gimytv",
 		"name": "剧迷",
@@ -61,7 +61,7 @@
 		"searchable": 1,
 		"quickSearch": 1,
 		"filterable": 1,
-		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_gimytv.py"
+		"ext": "https://raw.iqiq.io/UndCover/PyramidStore/main/plugin/py_gimytv.py"
 	}, {
 		"key": "py_genmov",
 		"name": "跟剧",
@@ -70,7 +70,7 @@
 		"searchable": 1,
 		"quickSearch": 1,
 		"filterable": 1,
-		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_genmov.py"
+		"ext": "https://raw.iqiq.io/UndCover/PyramidStore/main/plugin/py_genmov.py"
 	}, {
 		"key": "py_huya",
 		"name": "🔥虎牙",
@@ -79,7 +79,7 @@
 		"searchable": 0,
 		"quickSearch": 0,
 		"filterable": 1,
-		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_huya.py"
+		"ext": "https://raw.iqiq.io/UndCover/PyramidStore/main/plugin/py_huya.py"
 	}, {
 		"key": "py_douyu",
 		"name": "🔥斗鱼",
@@ -88,7 +88,7 @@
 		"searchable": 0,
 		"quickSearch": 0,
 		"filterable": 1,
-		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_douyu.py"
+		"ext": "https://raw.iqiq.io/UndCover/PyramidStore/main/plugin/py_douyu.py"
 	}, {
 		"key": "py_cokemv",
 		"name": "COKE",
@@ -97,7 +97,7 @@
 		"searchable": 1,
 		"quickSearch": 1,
 		"filterable": 1,
-		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_cokemv.py"
+		"ext": "https://raw.iqiq.io/UndCover/PyramidStore/main/plugin/py_cokemv.py"
 	}, {
 		"key": "py_xmaomi",
 		"name": "猫咪",
@@ -106,7 +106,7 @@
 		"searchable": 1,
 		"quickSearch": 1,
 		"filterable": 1,
-		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_xmaomi.py"
+		"ext": "https://raw.iqiq.io/UndCover/PyramidStore/main/plugin/py_xmaomi.py"
 	}, {
 		"key": "py_zhaozy",
 		"name": "找资源",
@@ -115,7 +115,7 @@
 		"searchable": 1,
 		"quickSearch": 1,
 		"filterable": 0,
-		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_zhaozy.py"
+		"ext": "https://raw.iqiq.io/UndCover/PyramidStore/main/plugin/py_zhaozy.py"
 	}, {
 		"key": "py_pansou",
 		"name": "盘搜",
@@ -124,7 +124,7 @@
 		"searchable": 1,
 		"quickSearch": 1,
 		"filterable": 0,
-		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_pansou.py"
+		"ext": "https://raw.iqiq.io/UndCover/PyramidStore/main/plugin/py_pansou.py"
 	}, {
 		"key": "push_agent",
 		"name": "阿里",
@@ -133,7 +133,7 @@
 		"searchable": 0,
 		"quickSearch": 0,
 		"filterable": 0,
-		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_ali.py"
+		"ext": "https://raw.iqiq.io/UndCover/PyramidStore/main/plugin/py_ali.py"
 	}],
 	"parses": [{
 		"name": "默认选项",
