@@ -39,7 +39,7 @@ class Spider(Spider):  # 元类 默认的元类 type
 
     def homeVideoContent(self):
         rsp = self.fetch("https://czspp.com")
-        root = self.html(rsp.text)
+        root = self.html(self.cleanText(rsp.text))
         aList = root.xpath("//div[@class='mi_btcon']//ul/li")
         videos = []
         for a in aList:
@@ -63,7 +63,7 @@ class Spider(Spider):  # 元类 默认的元类 type
         result = {}
         url = 'https://czspp.com/{0}/page/{1}'.format(tid, pg)
         rsp = self.fetch(url)
-        root = self.html(rsp.text)
+        root = self.html(self.cleanText(rsp.text))
         aList = root.xpath("//div[contains(@class,'mi_cont')]//ul/li")
         videos = []
         for a in aList:
@@ -89,7 +89,7 @@ class Spider(Spider):  # 元类 默认的元类 type
         tid = array[0]
         url = 'https://czspp.com/movie/{0}.html'.format(tid)
         rsp = self.fetch(url)
-        root = self.html(rsp.text)
+        root = self.html(self.cleanText(rsp.text))
         node = root.xpath("//div[@class='dyxingq']")[0]
         pic = node.xpath(".//div[@class='dyimg fl']/img/@src")[0]
         title = node.xpath('.//h1/text()')[0]
@@ -119,8 +119,6 @@ class Spider(Spider):  # 元类 默认的元类 type
                 vod['vod_actor'] = content.replace("主演：", "")
             if content.startswith('导演'):
                 vod['vod_director'] = content.replace("导演：", "")
-        # if content.startswith('剧情'):
-        # 	vod['vod_content'] = content
         vod_play_from = '$$$'
         playFrom = ['厂长']
         vod_play_from = vod_play_from.join(playFrom)
@@ -150,11 +148,9 @@ class Spider(Spider):  # 元类 默认的元类 type
         return result
 
     def searchContent(self, key, quick):
-        result = {}
         url = 'https://czspp.com/xssearch?q={0}'.format(key)
-        # getHeader()
         rsp = self.fetch(url)
-        root = self.html(rsp.text)
+        root = self.html(self.cleanText(rsp.text))
         vodList = root.xpath("//div[contains(@class,'mi_ne_kd')]/ul/li/a")
         videos = []
         for vod in vodList:
@@ -177,7 +173,6 @@ class Spider(Spider):  # 元类 默认的元类 type
             'list': videos
         }
         return result
-
     config = {
         "player": {},
         "filter": {}
@@ -233,13 +228,3 @@ class Spider(Spider):  # 元类 默认的元类 type
     def localProxy(self, param):
         action = {}
         return [200, "video/MP2T", action, ""]
-
-    def test(self):
-        # formatJo = self.init([]) # 初始化
-        # formatJo = self.homeContent(True) # 主页
-        # formatJo = self.homeVideoContent() # 主页视频
-        # formatJo = self.searchContent("dota",False) # 搜索
-        # formatJo = self.categoryContent('dbtop250','1',False,{}) # 分类
-        # formatJo = self.detailContent(["849"]) #详情 11195
-        formatJo = self.playerContent("", "bXZfODQ5LW5tXzE=", {})  # 播放
-        print(formatJo)
