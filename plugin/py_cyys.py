@@ -179,6 +179,8 @@ class Spider(Spider):  # 元类 默认的元类 type
         result = {}
         header = {
             "User-Agent": "Mozilla/5.0 (Linux; Android 4.4.2; Nexus 4 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.114 Mobile Safari/537.36"}
+        if id == '00000':
+            return {}
         url = 'https://www.30dian.cn/vodplay/{0}.html'.format(id)
         rsp = self.fetch(url,headers=header)
         root = self.html(self.cleanText(rsp.text))
