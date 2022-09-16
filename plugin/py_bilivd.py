@@ -29,15 +29,18 @@ class Spider(Spider):  # 元类 默认的元类 type
     def homeContent(self, filter):
         result = {}
         cateManual = {
-            "搞笑": "搞笑",
-            "美食": "美食",
-            "科普": "科普",
-            "橙子": "半个橙子",
-            "纪录片": "纪录片",
-            "演唱会": "演唱会",
+            "Zard": "Zard",
+            "玩具汽车": "玩具汽车",
+            "儿童": "儿童",
+            "幼儿": "幼儿",
+            "儿童玩具": "儿童玩具",
+            "昆虫": "昆虫",
             "动物世界": "动物世界",
+            "纪录片": "纪录片",
             "相声小品": "相声小品",
-            "假窗-白噪音": "窗+白噪音"
+            "搞笑": "搞笑",
+            "假窗-白噪音": "窗+白噪音",
+            "演唱会": "演唱会"
         }
         classes = []
         for k in cateManual:
@@ -59,7 +62,8 @@ class Spider(Spider):  # 元类 默认的元类 type
     cookies = ''
 
     def getCookie(self):
-        cookies_str = ""  # 填B站Cookies
+        # 在cookies_str中填入会员或大会员cookie，以获得更好的体验。
+        cookies_str = "innersign=0; buvid3=606BE156-AE37-AEA8-7052-9DA0B21766E776404infoc; b_nut=1663302976; i-wanna-go-back=-1; b_ut=7; b_lsid=4106252F6_18344933A90; _uuid=586AAEB7-6B88-A691-F7AC-95C27E57F53C43036infoc; buvid4=B6FF1449-4361-1C76-DEFC-4AFCA1777B7E78304-022091612-PdJr0jKE6N5TamfAEX9uACD1RXvklspbNdlcIQEFLMu0d9wS3G3sdA%3D%3D; buvid_fp=2a9b54d5e06aa54293dc7544e000552d"
         cookies_dic = dict([co.strip().split('=') for co in cookies_str.split(';')])
         rsp = session()
         cookies_jar = utils.cookiejar_from_dict(cookies_dic)
@@ -85,7 +89,7 @@ class Spider(Spider):  # 元类 默认的元类 type
         vodList = jo['data']['result']
         for vod in vodList:
             aid = str(vod['aid']).strip()
-            title = vod['title'].strip().replace("<em class=\"keyword\">", "").replace("</em>", "")
+            title = vod['title'].replace("<em class=\"keyword\">", "").replace("</em>", "").replace("&quot;", '"')
             img = 'https:' + vod['pic'].strip()
             remark = str(vod['duration']).strip()
             videos.append({
@@ -129,7 +133,7 @@ class Spider(Spider):  # 元类 默认的元类 type
             "vod_remarks": remark,
             "vod_actor": "",
             "vod_director": dire,
-            "vod_content": ""
+            "vod_content": desc
         }
         ja = jo['pages']
         playUrl = ''
@@ -167,7 +171,7 @@ class Spider(Spider):  # 元类 默认的元类 type
         vodList = jo['data']['result']
         for vod in vodList:
             aid = str(vod['aid']).strip()
-            title = vod['title'].strip().replace("<em class=\"keyword\">", "").replace("</em>", "")
+            title = vod['title'].replace("<em class=\"keyword\">", "").replace("</em>", "").replace("&quot;", '"')
             img = 'https:' + vod['pic'].strip()
             remark = str(vod['duration']).strip()
             videos.append({

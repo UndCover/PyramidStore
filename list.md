@@ -32,7 +32,7 @@
 <div id="py_ali" ></div>
 <div id="py_bilivd" ></div>
 
-* 大会员版B站爬虫需要在文件对应位置填入cookies，否则无法使用。<br>
+* B站爬虫建议在文件对应位置填入会员/大会员cookies，以获得更好的体验。<br>
   获取方法：Chrome浏览器访问[B站](www.bilibili.com)并登陆→F12→F5→Network→Header→cookies:后面的内容。
 ![image](https://raw.githubusercontent.com/lm317379829/PyramidStore/main/img/cookies%E8%8E%B7%E5%8F%96.jpg)
 ![image](https://raw.githubusercontent.com/lm317379829/PyramidStore/main/img/py_bilivd%E5%A1%AB%E5%85%A5.jpg)
