@@ -125,7 +125,7 @@ class Spider(Spider):  # 元类 默认的元类 type
 			'vod_name':infoJo['share_name'],
 			'vod_pic':infoJo['avatar'],
 			'vod_content':tid,
-			'vod_play_from':'AliYun$$$AliYun原画'
+			'vod_play_from':'AliYun原画$$$AliYun'
 		}
 		fileType = fileInfo['type']
 		if fileType != 'folder':
