@@ -23,6 +23,8 @@
 |py_3qu|3QU|[lm317379829](https://github.com/lm317379829)|调用py_ali||
 |py_cyys|创艺|[lm317379829](https://github.com/lm317379829)|调用py_ali||
 |py_wmkk|完美看看|[lm317379829](https://github.com/lm317379829)| 七里香源目前无法播放||
+|py_kunyu77|酷云77|UndCover|||
+|py_cctv_full|央视大全|UndCover|此版无需手动添加栏目，[栏目大全](https://tv.cctv.com/lm/index.shtml)中的栏目都可以观看|搜索不到的内容可以使用py_cctv添加栏目来观看|
 
 
 **以上爬虫均经过测试，在保证功能完整的情况下放出，若失效，请及时反馈**
@@ -30,7 +32,7 @@
 ## 待测试爬虫列表
 |文件名|名称|作者|描述|注意|
 |---|:---:|:---:|---|---|
-|py_kunyu77|酷云77|UndCover|||
+|py_ali_subtitle|阿里云盘(字幕支持)|UndCover|在py_ali基础之上添加字幕支持|食用方法:直接修改为py_ali替换原文件(此方法最为简单)，或者修改阿里系爬虫依赖以及配置文件|
 
 ## 注意事项
 <div id="py_ali" ></div>
