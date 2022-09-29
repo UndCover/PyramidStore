@@ -119,7 +119,18 @@ class Spider(Spider):  # 元类 默认的元类 type
 		content = rsp.text.strip()
 		arr = content.split('\n')
 		urlPrefix = self.regStr(id,'(http[s]?://[a-zA-z0-9.]+)/')
+		
+		subUrl = arr[-1].split('/')
+		subUrl[3] = '1200'
+		subUrl[-1] = '1200.m3u8'
+		hdUrl = urlPrefix + '/'.join(subUrl)
+
 		url = urlPrefix + arr[-1]
+
+		hdRsp = self.fetch(hdUrl,headers=self.header)
+		if hdRsp.status_code == 200:
+			url = hdUrl
+
 		result["parse"] = 0
 		result["playUrl"] = ''
 		result["url"] = url
