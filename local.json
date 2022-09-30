@@ -183,11 +183,11 @@
 		"key": "py_alist",
 		"name": "Alist",
 		"type": 3,
-		"api": "py_pansou",
+		"api": "py_alist",
 		"searchable": 1,
 		"quickSearch": 1,
 		"filterable": 0,
-		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_alist.py"
+		"ext": "file:///storage/emulated/0/plugin/py_alist.py"
 	},{
 		"key": "py_pansou",
 		"name": "盘搜",
