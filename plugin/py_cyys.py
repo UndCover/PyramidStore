@@ -187,9 +187,13 @@ class Spider(Spider):  # 元类 默认的元类 type
         scripts = root.xpath("//div[@class='embed-responsive clearfix']/script[@type='text/javascript']/text()")[0]
         ukey = re.findall(r"url(.*)url_next", scripts)[0].replace('"', "").replace(',', "").replace(':', "")
         purl = urllib.parse.unquote(ukey)
+        if purl.startswith('http'):
+            purl = purl
+        else:
+            purl = 'https://vip.30dian.cn/?url=' + purl
         result["parse"] = 0
         result["playUrl"] = ''
-        result["url"] =purl
+        result["url"] = purl
         result["header"] = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36"}
         return result
 
