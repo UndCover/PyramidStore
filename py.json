@@ -183,7 +183,7 @@
 		"key": "py_alist",
 		"name": "Alist",
 		"type": 3,
-		"api": "py_pansou",
+		"api": "py_alist",
 		"searchable": 1,
 		"quickSearch": 1,
 		"filterable": 0,
