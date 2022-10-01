@@ -5,6 +5,8 @@ import re
 sys.path.append('..')
 from base.spider import Spider
 import urllib.parse
+import base64
+from Crypto.Cipher import AES
 
 class Spider(Spider):  # 元类 默认的元类 type
     def getName(self):
@@ -174,6 +176,13 @@ class Spider(Spider):  # 元类 默认的元类 type
             'list': videos
         }
         return result
+    def parseCBC(self, enc, key, iv):
+        keyBytes = key.encode("utf-8")
+        ivBytes = iv.encode("utf-8")
+        cipher = AES.new(keyBytes, AES.MODE_CBC, ivBytes)
+        msg = cipher.decrypt(enc)
+        paddingLen = msg[len(msg) - 1]
+        return msg[0:-paddingLen]
 
     def playerContent(self, flag, id, vipFlags):
         result = {}
@@ -190,7 +199,15 @@ class Spider(Spider):  # 元类 默认的元类 type
         if purl.startswith('http'):
             purl = purl
         else:
-            purl = 'https://vip.30dian.cn/?url=' + purl
+            scrurl = 'https://vip.30dian.cn/?url={0}'.format(purl)
+            script = self.fetch(scrurl,headers=header)
+            html = script.text
+            pat = 'var le_token = \\"([\\d\\w]+)\\"'
+            cpat = 'getVideoInfo\\(\\"(.*)\\"\\)'
+            content = self.regStr(html, cpat)
+            iv = self.regStr(html, pat)
+            key = 'A42EAC0C2B408472'
+            purl = self.parseCBC(base64.b64decode(content), key, iv).decode()
         result["parse"] = 0
         result["playUrl"] = ''
         result["url"] = purl
