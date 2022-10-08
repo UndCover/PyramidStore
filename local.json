@@ -81,15 +81,6 @@
 		"filterable": 1,
 		"ext": "file:///storage/emulated/0/plugin/py_zxzj.py"
 	},{
-		"key": "py_wmkk",
-		"name": "完美看看(半残)",
-		"type": 3,
-		"api": "py_wmkk",
-		"searchable": 1,
-		"quickSearch": 1,
-		"filterable": 1,
-		"ext": "file:///storage/emulated/0/plugin/py_wmkk.py"
-	},{
 		"key": "py_voflix",
 		"name": "Voflix",
 		"type": 3,
@@ -189,6 +180,15 @@
 		"filterable": 0,
 		"ext": "file:///storage/emulated/0/plugin/py_zhaozy.py"
 	}, {
+		"key": "py_alist",
+		"name": "Alist",
+		"type": 3,
+		"api": "py_alist",
+		"searchable": 1,
+		"quickSearch": 1,
+		"filterable": 0,
+		"ext": "file:///storage/emulated/0/plugin/py_alist.py"
+	},{
 		"key": "py_pansou",
 		"name": "盘搜",
 		"type": 3,

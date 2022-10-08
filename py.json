@@ -22,8 +22,8 @@
 		"name": "B站(带搜索)",
 		"type": 3,
 		"api": "py_bilivd",
-		"searchable": 0,
-		"quickSearch": 0,
+		"searchable": 1,
+		"quickSearch": 1,
 		"filterable": 1,
 		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_bilivd.py"
 	},{
@@ -31,8 +31,8 @@
 		"name": "3QU",
 		"type": 3,
 		"api": "py_3qu",
-		"searchable": 0,
-		"quickSearch": 0,
+		"searchable": 1,
+		"quickSearch": 1,
 		"filterable": 1,
 		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_3qu.py"
 	},{
@@ -67,8 +67,8 @@
 		"name": "创艺",
 		"type": 3,
 		"api": "py_cyys",
-		"searchable": 0,
-		"quickSearch": 0,
+		"searchable": 1,
+		"quickSearch": 1,
 		"filterable": 1,
 		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_cyys.py"
 	},{
@@ -80,15 +80,6 @@
 		"quickSearch": 1,
 		"filterable": 1,
 		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_zxzj.py"
-	},{
-		"key": "py_wmkk",
-		"name": "完美看看(半残)",
-		"type": 3,
-		"api": "py_wmkk",
-		"searchable": 1,
-		"quickSearch": 1,
-		"filterable": 1,
-		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_wmkk.py"
 	},{
 		"key": "py_voflix",
 		"name": "Voflix",
@@ -188,6 +179,15 @@
 		"quickSearch": 1,
 		"filterable": 0,
 		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_zhaozy.py"
+	}, {
+		"key": "py_alist",
+		"name": "Alist",
+		"type": 3,
+		"api": "py_alist",
+		"searchable": 1,
+		"quickSearch": 1,
+		"filterable": 0,
+		"ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_alist.py"
 	}, {
 		"key": "py_pansou",
 		"name": "盘搜",
