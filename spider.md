@@ -94,7 +94,7 @@ spider提供了一些需要被实现的方法和一些公共方法，请自行�
 * ext写py的网络地址或者本地地址
 * 如果脚本之间有依赖关系，则脚本地址必须在同一路径下
 
-```
+```json
 {
     "key": "py_pansou",
     "name": "盘搜",
@@ -115,5 +115,46 @@ spider提供了一些需要被实现的方法和一些公共方法，请自行�
     "ext": "file:///storage/emulated/0/plugin/py_ali.py"
 }
 ```
+##### 5. 外置参数
 
-##### 目前只能想到这么多了，有什么问题，请反馈到群里，后续会补充
+* spider内置一个extend参数，用于接收配置链接中的extend参数
+
+```json
+{
+    "key": "push_agent",
+    "name": "阿里",
+    "type": 3,
+    "api": "py_ali",
+    "searchable": 0,
+    "quickSearch": 0,
+    "filterable": 0,
+    "ext": "https://raw.githubusercontent.com/UndCover/PyramidStore/main/plugin/py_ali.py?extend=12345678901234561234567890123456"  //外置参数传递
+}
+```
+
+```python
+def login(self):
+        self.localTime = int(time.time())
+        url = 'https://api.aliyundrive.com/token/refresh'
+        if len(self.authorization) == 0 or self.timeoutTick - self.localTime <= 600:
+            form = {
+                'refresh_token':'b566279f7cd98ba3b566279f7cd98ba3'              
+            }
+            try:
+                if len(self.extend) > 0:
+                    form['refresh_token'] = self.extend     #使用外置参数作为token
+            except Exception as e:
+                pass
+            rsp = requests.post(url,json = form,headers=self.header)
+            jo = json.loads(rsp.text)
+            if rsp.status_code == 200:
+                self.authorization = jo['token_type'] + ' ' + jo['access_token']
+                self.expiresIn = int(jo['expires_in'])
+                self.timeoutTick = self.localTime + self.expiresIn
+                return True
+            return False
+        else:
+            return True
+```
+
+##### 问题请反馈到[tg](https://t.me/+A3SLQRmPVi9kOThl)群里

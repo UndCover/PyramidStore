@@ -428,6 +428,11 @@ class Spider(Spider):  # 元类 默认的元类 type
 			form = {
 				'refresh_token':'4acb3ad2f2254ba1b566279f7cd98ba3'				
 			}
+			try:
+				if len(self.extend) > 0:
+					form['refresh_token'] = self.extend
+			except Exception as e:
+				pass
 			rsp = requests.post(url,json = form,headers=self.header)
 			jo = json.loads(rsp.text)
 			if rsp.status_code == 200:
